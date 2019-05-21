@@ -1,0 +1,135 @@
+
+/* Start header */
+.card-header{
+	background-color: #8EC14B;
+}
+
+.card-header ul{
+	float: right;
+	list-style: none;
+}
+
+.card-header ul li{
+	float: left;
+	margin-left: 20px;
+	color: rgba(255, 255, 255, 0.8);
+	font-family:  serif;
+	font-size: 18px;
+
+}
+.card-header ul li a{
+	 color: rgba(255, 255, 255, 0.7);
+}
+
+/* End header */
+
+/* Start content */
+.container{
+	height: 1000px;
+}
+.modal-title{
+	margin-left: 200px;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+ span{
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px
+}
+.facebook,.login{
+	text-align: center;
+	background-color: #5777B9;
+	width: 420px;
+	height: 40px;
+	color: #FFFF;
+	border: 2px solid #5777B9;
+	border-radius: 10px;
+	margin: auto;
+	padding-top: 5px;
+	-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+
+}
+.facebook i{
+	float: left;
+}
+
+.login{
+	background-color: #00A53C;
+	border: 2px solid #00A53C;
+	margin-top: 30px;
+}
+	
+ h1{
+	color: #849D41;
+	font-family: cursive;
+	text-align: center;
+	font-weight: bold;
+}
+ h3{
+	text-align: center;
+}
+
+.content .image{
+	width: 30%;
+	border: 1px;
+	margin: 10px;
+	float: left;
+
+}
+/* End content */
+
+/* Start Footer */
+.card-footer {
+	height: 200px;
+}
+
+.card-footer ul{
+	float: left;
+	list-style: none;
+}
+
+.card-footer ul li{
+	margin-left: 30px;
+	float: left;
+	margin-right: 40px;
+	font-size: 18px;
+	padding-top: 20px;
+}
+.card-footer .list ul li a{
+	
+	font-family:  serif;
+}
+ a:hover{
+	text-decoration: none;
+
+}
+
+.card-footer .contacts{
+	float: right;
+	padding-top: 20px;
+	margin-right: 500px;
+}
+/* End footer */
+
+/* Start carousel */
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    margin-top: 0;
+    height: 400px;
+    min-width: 100%;
+    width: 100%;
+   	max-width: 100%;
+    line-height: 1;
+    }
+
+/* End carousel */
+
+
+    
