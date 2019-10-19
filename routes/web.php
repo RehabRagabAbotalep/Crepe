@@ -16,6 +16,13 @@
 Auth::routes();
 
 Route::get('/','HomeController@index');
+
+/*Route::get('/home/{lang?}',function($lang=null){
+	App::setlocale($lang);
+	return view('layout.home');
+});*/
+	
+
 Route::get('/home','ViewsController@index')->name('home');
 
 Route::get('/signUp', 'ViewsController@signUp')->name('signUp');
@@ -54,9 +61,9 @@ Route::get('/address/create','AddressController@create')->name('address.create')
 Route::post('/address/store','AddressController@store')->name('address.store');
 
 //Admin Middleware
-Route::get('admin_area', ['middleware' => 'admin', function () {
+//Route::get('admin_area', ['middleware' => 'admin', function () {
     
-	Route::get('/', 'AdminController@admin')->name('admin');
+	//Route::get('/', 'AdminController@admin')->name('admin');
 
 	//User Routes
 	Route::get('user/create', 'Admin\UserController@create')->name('user.create');
@@ -81,4 +88,4 @@ Route::get('admin_area', ['middleware' => 'admin', function () {
 	Route::get('/product/delete/{id}','Admin\ProductController@delete')->name('product.delete');
 	Route::get('/product/edit/{id}','Admin\ProductController@edit')->name('product.edit');
 	Route::post('/product/update/{id}','Admin\ProductController@update')->name('product.update');
-}]);
+//}]);

@@ -52,7 +52,7 @@
 											@endif
 										</td>
 										<td>{{$product->totalPrice}} LE</td>
-										<td><img src="images/{{$product->image}}" width="50px" height="50px"></td>
+										<td><img src="uploads/Product/{{$product->image}}" width="50px" height="50px"></td>
 
 										<td>{{$product->category->name_en}}</td>
 										<td><a href="{{route('product.edit',['id'=>$product->id])}}">Edit</a></td>

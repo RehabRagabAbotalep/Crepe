@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->integer('discount')->nullable();
             $table->float('totalPrice');
             $table->bigInteger('category_id')->unsigned();
-            $table->foreign('category_id') ->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 

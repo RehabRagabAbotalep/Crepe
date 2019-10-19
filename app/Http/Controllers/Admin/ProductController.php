@@ -58,14 +58,22 @@ class ProductController extends Controller
     	return view('admin.Products.edit',compact('product'),compact('categories'));
     }
 
+
     public function update(Request $request,$id){
-    	$product = Product::find($id);
+    	
     	$request->validate([
     		'name_en'=>'string|min:4',
             'name_ar'=>'string|min:4',
     		'category_id'=>'required',
     		'image'=>'image|mimes:jpg,png,jpeg|max:2048',
     	]);
+
+
+        Product::findOrFail($id)->update($request->all());
+        
+        
+
+        /*
     	if($request->hasFile('image')){
     		$image_name =time().'.'. $request->image->getClientOriginalExtension();
     		$request->image->move('images',$image_name);
@@ -79,7 +87,7 @@ class ProductController extends Controller
     	$product->category_id = $request->category_id;
     	$product->discount = $request->discount;
     	$product->totalPrice =round((1-($product->discount/100))*$product->price,2);
-    	$product->save();
+    	$product->save();*/
     	return redirect('products')->with('status','Updated Sucessfuly');
 
     }
